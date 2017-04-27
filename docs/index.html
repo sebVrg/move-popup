@@ -14,7 +14,7 @@
          <script src="./underscore.js"></script>
          <script src="./backbone.js"></script>
          <script id="title-template" type="text/template">
-            <a href="#qux" role="button" data-role="button" data-icon="bars" class="ui-link ui-btn-left ui-btn ui-icon-bars ui-btn-icon-left ui-shadow ui-corner-all" >Menu</a>
+           <!-- <a href="#qux" role="button" data-role="button" data-icon="bars" class="ui-link ui-btn-left ui-btn ui-icon-bars ui-btn-icon-left ui-shadow ui-corner-all" >Menu</a>-->
             <h1 class="ui-title" role="heading" aria-level="1">
            <marquee direction="right" behavior="scroll" scrollamount="6" style="height:75px;width:75%;background-color:#00000;font-family:Cursive;font-size:22pt;color:#ffffff;font-weight:bold;border-width:0;border-style:solid;border-color:#000000;text-align:center; " ></br>Moove PopUp</marquee>
             </h1>
@@ -127,10 +127,15 @@
 
       
         <div data-role="page" id="emer">
-           
-            <div data-role="header" data-theme="b"></div>
+          
+            <div data-role="header" data-theme="b">
+                   
+            </div>
             
-            <div data-role="main" class="ui-content">
+            <div data-role="main" class="ui-content"> 
+            <div id="vignCorner">
+                 <a href="#qux"><img src="homeVign2.png" width="100px" height="100px" /></a>
+                 </div>
          </div>      
          <div data-role="footer" data-position="fixed" data-theme="b"></div>               
                
@@ -139,6 +144,9 @@
         </div>
         
         <div data-role="page" id="aler" >
+
+
+
             <div data-role="header" data-theme="b"></div>
             <div data-role="main" class="ui-content"></div>                                        
             <div data-role="footer" data-position="fixed" data-theme="b"></div>

@@ -4,12 +4,13 @@
 
             margin-left: 45%;
             margin-top:  10%;
-            width: 100px;
-            height: 100px;
+            width: 128px;
+            height: 128px;
            
         }
         .example-1 .sticker-img {
-            background-image: url(menuVign.png);
+            background-image: url(homeVign2.png);
+            
 
         }
         .example-2 .sticker-img {
@@ -17,4 +18,9 @@
         }
         .example-2 .sticker-shadow {
             opacity: 0.6;
+        }
+        #vignCorner {
+            width: 100%;
+            margin-left: 10%;
+            margin-top: 10%;
         }
