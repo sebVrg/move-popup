@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+         <title>MoovePopUp</title>
+         <meta charset="UTF-8">
+             
+         <link rel="stylesheet" type="text/css" href="./jquery.mobile-1.4.5/jquery.mobile-1.4.5.css" /> 
+         <link href="index.css" rel="stylesheet" type="text/css"/>
+         <link rel="stylesheet" type="text/css" href="index.css" /> 
+         <link rel="stylesheet" type="text/css" href="movepopup.css" /> 
+         <link rel="stylesheet" type="text/css" href="foo.css" /> 
+         <script src="./jquery-1.8.3.js"></script>
+         <script src="./underscore.js"></script>
+         <script src="./backbone.js"></script>
+         <script id="title-template" type="text/template">
+            <a href="#qux" role="button" data-role="button" data-icon="bars" class="ui-link ui-btn-left ui-btn ui-icon-bars ui-btn-icon-left ui-shadow ui-corner-all" >Menu</a>
+            <h1 class="ui-title" role="heading" aria-level="1">
+           <marquee direction="right" behavior="scroll" scrollamount="6" style="height:75px;width:75%;background-color:#00000;font-family:Cursive;font-size:22pt;color:#ffffff;font-weight:bold;border-width:0;border-style:solid;border-color:#000000;text-align:center; " ></br>Moove PopUp</marquee>
+            </h1>
+            <a href="https://github.com/sebVrg" class="ui-link ui-btn-right ui-btn ui-shadow ui-corner-all" target="_blank" id='image'>
+                <img src="https://img.shields.io/github/watchers/badges/shields.svg?style=social&label=Watch" alt='logo' />
+            </a>
+          </script>
+<!--<%= title %>-->
+          
+          <script src="./model/page-model.js"></script>
+          <script src="./view/page-view.js"></script>
+         <script src="router.js"></script>
+         <script type="text/javascript" src="index.js"></script>
+         <script src="sticker.min.js"></script>
+         <script type="text/javascript">
+        window.onload = function() {
+            Sticker.init('.sticker');
+        }
+    </script>
+        
+      
+        
+                <script>
+                        $(document).on("mobileinit",function () {
+                         //compatibility version
+                         if (!$.panel) {
+                             $.panel = $.mobile.panel;
+                         }
+
+                         //initialize theme
+                         $.panel.prototype.options.theme="b";
+                         //stop initialisation
+                         $.mobile.autoInitializePage= false;
+                         //Global configuration
+                        //$.mobile.defaultPageTransition ="fade";
+                     });
+            
+            
+                        $(function () {
+
+
+                            new TempRouter();
+                            window.Backbone.history.start();
+                            $.mobile.initializePage();
+                            //to get panel
+                            $("#qux").panel(); 
+
+                        });
+
+    
+    function actionEmergency () {        
+             movepopup.emergency("Emergency ! your system is unusable !.");
+      };
+    function actionAlert() {
+             movepopup.alert("Alert ! your name must be start\n with a capital letter.");
+      };      
+    function actionError() {       
+             movepopup.error("Error ! this entry is invalid .");
+      };
+    function actionWarning() {
+             movepopup.warning("Warning ! Youre browser is not updated .");
+      };     
+    function actionNotice() {       
+             movepopup.notice("Notice ! youre version will be depreciated in 2 days .");
+       };
+    function actionInfo() {
+          
+            movepopup.info("Info ! A new version is available .");
+        };
+     function actionDebug() {
+          
+            movepopup.debug("Debug ! Thanks to stop with ctrl + alt + sup .");     
+        };   
+       
+           
+           
+        </script>  
+         <script src="./jquery.mobile-1.4.5/jquery.mobile-1.4.5.js"></script>    
+    </head>        
+           
+           
+    <body>
+        <div data-role="panel" id="qux"  data-theme="b" data-display="overlay">
+            <a class="ui-btn ui-btn-a ui-btn-block" href="#home" data-role="button" id="home" >Home</a>
+            <a class="ui-btn ui-btn-a ui-btn-block" href="#emer" data-role="button" id="emerg" onclick="actionEmergency()">Emergency</a>
+            <a class="ui-btn ui-btn-a ui-btn-block" href="#aler" data-role="button" id="alert" onclick="actionAlert()">Alert</a>
+            <a class="ui-btn ui-btn-a ui-btn-block" href="#erro" data-role="button" id="error" onclick="actionError()">Error</a>
+            <a class="ui-btn ui-btn-a ui-btn-block" href="#warn" data-role="button" id="warni" onclick="actionWarning()">Warning</a>
+            <a class="ui-btn ui-btn-a ui-btn-block" href="#noti" data-role="button" id="noti" onclick="actionNotice()">Notice</a>
+            <a class="ui-btn ui-btn-a ui-btn-block" href="#info" data-role="button" id="info" onclick="actionInfo()">Info</a>
+            <a class="ui-btn ui-btn-a ui-btn-block" href="#debu" data-role="button" id="debu" onclick="actionDebug()">Debug</a>
+            <a class="ui-btn ui-btn-inline ui-btn-a ui-icon-delete ui-btn-icon-left" data-rel="close" id="croix">close</a>
+        </div>
+        
+        <div data-role="page" id="home" >
+            <div data-role="header" data-theme="b">
+               
+            </div>
+            <div data-role="main" class="ui-content">
+                     <div data-role="collapsible" id="infos" data-theme="b">
+                <h3>About popup</h3>
+                <p>Dynamic popup in accordance with PSR3 .</p>
+                </div>
+              
+                <a href="#qux"><div class="sticker example-1"></div></a>
+                
+            </div>                                        
+            <div data-role="footer" data-position="fixed" data-theme="b"></div>
+        </div>
+
+      
+        <div data-role="page" id="emer">
+           
+            <div data-role="header" data-theme="b"></div>
+            
+            <div data-role="main" class="ui-content">
+         </div>      
+         <div data-role="footer" data-position="fixed" data-theme="b"></div>               
+               
+        
+            
+        </div>
+        
+        <div data-role="page" id="aler" >
+            <div data-role="header" data-theme="b"></div>
+            <div data-role="main" class="ui-content"></div>                                        
+            <div data-role="footer" data-position="fixed" data-theme="b"></div>
+        </div>           
+            
+            
+         <div data-role="page" id="erro" >
+            <div data-role="header" data-theme="b"></div>
+            <div data-role="main" class="ui-content"></div>
+            <div data-role="footer" data-position="fixed" data-theme="b"></div>
+         </div>    
+           
+            
+        <div data-role="page" id="warn" >
+            <div data-role="header" data-theme="b"></div>
+            <div data-role="main" class="ui-content"></div>
+            <div data-role="footer" data-position="fixed" data-theme="b"></div>
+        </div>     
+        
+        
+        <div data-role="page" id="noti" >
+            <div data-role="header" data-theme="b"></div>
+            <div data-role="main" class="ui-content"></div>
+            <div data-role="footer" data-position="fixed" data-theme="b"></div>
+        </div>
+            
+        <div data-role="page" id="info" >   
+            <div data-role="header" data-theme="b"></div>
+             <div data-role="main" class="ui-content"></div>  
+            <div data-role="footer" data-position="fixed" data-theme="b"></div>
+        </div>
+      
+            
+        <div data-role="page" id="debu" >   
+             <div data-role="header" data-theme="b"></div>
+             <div data-role="main" class="ui-content"></div>  
+            <div data-role="footer" data-position="fixed" data-theme="b"></div>
+        </div>
+      
+     </body>
+</html> 
+        
+          
+            
+             
+                
+          
+       
+       
+          
+            
+           
+           
+       
+
+
+
+
+             
+
+      
+                      
+        
+            
+            
+                
+            
+        
+        
+      
+    
+       
+          
+    
+             
+         
+ 
+
+
+            
+             
+         
+         
+         
+         
+    
+    

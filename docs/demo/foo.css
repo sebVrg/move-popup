@@ -1,0 +1,20 @@
+
+        .sticker {
+            position: relative;
+
+            margin-left: 45%;
+            margin-top:  10%;
+            width: 100px;
+            height: 100px;
+           
+        }
+        .example-1 .sticker-img {
+            background-image: url(menuVign.png);
+
+        }
+        .example-2 .sticker-img {
+            background-color: #ff4a85;
+        }
+        .example-2 .sticker-shadow {
+            opacity: 0.6;
+        }
