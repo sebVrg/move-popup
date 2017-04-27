@@ -1,6 +1,7 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/006248766bbd420b9d02348dbe3d22d5)](https://www.codacy.com/app/sebVrg/move-popup?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=sebVrg/move-popup&amp;utm_campaign=Badge_Grade)
 [![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
 [![Build Status](https://travis-ci.org/sebVrg/move-popup.svg?branch=master)](https://travis-ci.org/sebVrg/move-popup)
-[![npm](https://img.shields.io/npm/v/movepopup.svg)]()
+[![npm](https://img.shields.io/npm/v/npm.movepopup?style=plastic)]()
 
 
 This package will help you determine the diferent level in dynamics style of log in accordance with PSR3.
